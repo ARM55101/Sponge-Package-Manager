@@ -5,7 +5,7 @@ input = input('')
 hashmap = []
 def push(package):
     push.package = package
-    package_hash = hashlib.sha256(package.encode("utf-8")).hexdigest()
+    package_hash = hashlib.sha3(package.encode("utf-8")).hexdigest()
     hashmap.append(package_hash)
 def pull(position):
     pull.position = position
