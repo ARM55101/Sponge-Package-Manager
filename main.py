@@ -1,6 +1,7 @@
 #bin/bash/python3
 import socket
 import hashlib
+import os
 input = input('')
 hashmap = []
 def push(package):
@@ -21,3 +22,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.sendall(bytes(GET, 'utf-8'))
     return_hash = s.recv(1024)
     print(return_hash)
+os.system('cd' + ' ' + input)
+os.system('make')
